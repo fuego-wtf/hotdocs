@@ -1,0 +1,86 @@
+openapi: "3.0.0"
+info:
+  title: Graphyn API
+  version: "1.0.0"
+  description: This is the OpenAPI specification for the Graphyn backend, including graph and payment endpoints.
+paths:
+  /api/nodes:
+    post:
+      summary: Create or update a node
+      requestBody:
+        description: Node data
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                labels:
+                  type: array
+                  items:
+                    type: string
+                props:
+                  type: object
+      responses:
+        "200":
+          description: Node created or updated successfully
+    get:
+      summary: Query nodes
+      parameters:
+        - in: query
+          name: label
+          schema:
+            type: string
+          description: Optional label to filter nodes
+        - in: query
+          name: propFilter
+          schema:
+            type: string
+          description: JSON string for filtering node properties
+      responses:
+        "200":
+          description: Returns a list of nodes
+  /api/edges:
+    post:
+      summary: Create an edge
+      requestBody:
+        description: Edge data
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sourceId:
+                  type: string
+                targetId:
+                  type: string
+                label:
+                  type: string
+                props:
+                  type: object
+      responses:
+        "200":
+          description: Edge created successfully
+  /api/payment/create-checkout-session:
+    post:
+      summary: Create a Stripe checkout session
+      requestBody:
+        description: Payment session data
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                priceId:
+                  type: string
+                successUrl:
+                  type: string
+                cancelUrl:
+                  type: string
+      responses:
+        "200":
+          description: Checkout session created with URL returned 

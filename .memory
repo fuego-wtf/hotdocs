@@ -1,0 +1,22 @@
+// commit: ext arch diag
+// log: added extended architecture diagram with web app components and detailed data flows
+// learned: documented full component interactions across backend, sdk, and web app 
+
+// commit: docs unify
+// log: unified docs from graphyn, node, and coregraph to graphyard/docs umbrella
+// learned: consolidated documentation for peace of mind 
+
+// commit: move all docs
+// log: moved .docs, internal, misc and .memory files to graphyard
+// learned: ensure thorough check of all doc-related directories 
+
+// commit: reorganize docs
+// log: restructured docs by category (api, development, architecture, deployment, todos)
+// learned: proper documentation organization improves maintainability 
+
+// commit: add getting started
+// log: created comprehensive getting started guide with setup and workflow instructions
+// learned: quick start documentation helps new developers onboard faster 
+
+// commit: upd sidebar nav
+// learning: updated sidebar navigation to focus on hotdocs guides and resources for fast dev start. Removed AI data layer references. 
