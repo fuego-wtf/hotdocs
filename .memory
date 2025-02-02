@@ -20,3 +20,8 @@
 
 // commit: upd sidebar nav
 // learning: updated sidebar navigation to focus on hotdocs guides and resources for fast dev start. Removed AI data layer references. 
+
+[2024-02-02 22:45] created private repository hotdocs under fuego-wtf organization
+- initialized with proper .gitignore
+- added all project files
+- set up with HTTPS remote 
